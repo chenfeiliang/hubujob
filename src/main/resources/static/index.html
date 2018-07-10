@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="js/jquery-1.9.1.js" ></script>
+    <script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.js" ></script>
+    <script type="text/javascript" src="js/index.js" ></script>
+</head>
+
+<body onload="a();">
+<div class="container-fluid" id="xxx" style="background: #ECEFF3;min-height: 900px">
+
+    <div class="topBox container" >
+        <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header" style="">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <a class="navbar-brand" href="#" style="margin-top: -10px;">
+                        <img alt="Brand" src="img/hubu-logo.png" style="width: 100px; height: 40px;">
+                    </a>
+
+
+                    <div class="dropdown" >
+                        <a href="#" class="dropdown-toggle navbar-brand" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">陈飞良<span class="caret"></span></a>
+                        <ul class="dropdown-menu" style="margin-top: 35px;margin-left: 112px;">
+                            <li><a href="#" >我的简历</a></li>
+                            <li><a href="#">退出</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-left: 40%;">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>
+                            <li><a href="#">校招</a></li>
+                            <li><a href="#">全部网申</a></li>
+                            <li><a href="#">重点网申</a></li>
+                            <li><a href="#">关注公司</a></li>
+                            <li><a href="#">收藏职位</a></li>
+
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+        </nav>
+    </div>
+
+    <div class="centerBox container" style="margin-top: 50px;background: white;">
+
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Please Input Job Or Company">
+                    <span class="input-group-btn">
+					        <button class="btn btn-default" type="button">Go!</button>
+					      </span>
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+            <div class="col-lg-3"></div>
+        </div><!-- /.row -->
+
+        <div class="row" style="margin-top: 50px;">
+
+            <div class="container">
+                <table class="table table-responsive table-hover">
+                    <thead >
+                   <tr>
+
+                        <th style="text-align: center;">
+                            <div class="row">
+                                <div class="col-md-6">职位</div>
+                                <div class="col-md-6">公司</div>
+                            </div>
+                        </th>
+
+                        <th style="text-align: center;">
+                            <div class="row">
+                                <div class="col-md-4">收入</div>
+                                <div class="col-md-4">地点</div>
+                                <div class="col-md-4">日期</div>
+                            </div>
+                        </th>
+
+                        <th style="text-align: center;">
+                            <div class="row">
+                                <!--<div class="col-md-6"></div>-->
+                                <div class="col-md-12">收藏</div>
+                            </div>
+                        </th>
+
+                        <th style="text-align: center;">
+                            <div class="row">
+                                <!--<div class="col-md-6"></div>-->
+                                <div class="col-md-12">来源</div>
+                            </div>
+                        </th>
+
+                    </tr>
+
+                    </thead>
+
+                    <tbody id="tableBody">
+                    <!-- <tr align="center">
+                        <td>
+                            <div class="row">
+                                <div class="col-md-6">java</div>
+                                <div class="col-md-6">阿里巴巴</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row">
+                                <div class="col-md-4">100000-20000</div>
+                                <div class="col-md-4">杭州</div>
+                                <div class="col-md-4">2018-07-05</div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="row">
+                                <div class="col-md-6">&nbsp;</div>
+                                <div class="col-md-6">
+                                    <img  src="img/collect.png" style="width: 30px;height: 30px;"/>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="row">
+                                <div class="col-md-6">&nbsp;</div>
+                                <div class="col-md-6">
+                                    <img  src="img/qianchengwuyou.png" style="width: 70px;height: 27px;"/>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr align="center">
+                        <td>
+                            <div class="row">
+                                <div class="col-md-6 jobName">java</div>
+                                <div class="col-md-6 Company">阿里巴巴</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row">
+                                <div class="col-md-4 salary">100000-20000</div>
+                                <div class="col-md-4 pubcity">杭州</div>
+                                <div class="col-md-4 time">2018-07-05</div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="row">
+                                <div class="col-md-6">&nbsp;</div>
+                                <div class="col-md-6">
+                                    <img class = "collect" src="img/collect.png" style="width: 30px;height: 30px;"/>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="row">
+                                <div class="col-md-6">&nbsp;</div>
+                                <div class="col-md-6">
+                                    <img  class = "resource" src="img/zhilian.jpg" style="width: 70px;height: 27px;"/>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr align="center">
+                        <td>
+                            <div class="row">
+                                <div class="col-md-6 jobName">java</div>
+                                <div class="col-md-6 company">阿里巴巴</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row">
+                                <div class="col-md-4 salary">100000-20000</div>
+                                <div class="col-md-4 pubCity">杭州</div>
+                                <div class="col-md-4 time">2018-07-05</div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="row">
+                                <div class="col-md-6">&nbsp;</div>
+                                <div class="col-md-6">
+                                    <img  src="img/collect.png" class="collect" style="width: 30px;height: 30px;"/>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="row">
+                                <div class="col-md-6">&nbsp;</div>
+                                <div class="col-md-6">
+                                    <img  src="img/qianchengwuyou.png" class="resource" style="width: 70px;height: 27px;"/>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>-->
+                    </tbody>
+                </table>
+            </div>
+        </div><!-- /.row -->
+
+    </div>
+
+    <div class="centerBox container">
+
+    </div>
+</div>
+</body>
+
+</html>
