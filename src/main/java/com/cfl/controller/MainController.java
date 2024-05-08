@@ -8,12 +8,15 @@ import com.cfl.service.JobService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import java.util.List;
 
+@CrossOrigin(origins = "*")
 @Controller
 public class MainController {
 
@@ -32,8 +35,8 @@ public class MainController {
 
     @ResponseBody
     @RequestMapping("/findFullTextByKey")
-    public Msg findFullTextByKey(String key) throws InterruptedException {
-
+    public Msg findFullTextByKey(String key, HttpServletResponse response) throws InterruptedException {
+        
         List<Job> list = new ArrayList<>();
 
         list = jobService.findFullTextByKey(key);

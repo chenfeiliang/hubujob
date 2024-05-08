@@ -1,6 +1,6 @@
 function a(){
     $.ajax({
-        url: "http://localhost:8080/hubujob/findFullTextByKey?key=java",
+        url: "http://192.168.1.6:8080/hubujob/findFullTextByKey?key=java",
         type:"get",
         dataType:"json",
         contentType: "application/x-www-form-urlencoded; charset=UTF-8",//防止乱码

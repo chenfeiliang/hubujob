@@ -1,10 +1,9 @@
 package com.cfl.pojo;
 
-import java.util.Date;
-
 public class Job {
+    private String id;
 
-    private String jobName ;
+    private String jobName;
 
     private String jobHref;
 
@@ -16,7 +15,7 @@ public class Job {
 
     private String date;
 
-    private String resouse ;
+    private String resouse;
 
     public Job() {
     }
@@ -31,12 +30,20 @@ public class Job {
         this.resouse = resouse;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id == null ? null : id.trim();
+    }
+
     public String getJobName() {
         return jobName;
     }
 
     public void setJobName(String jobName) {
-        this.jobName = jobName;
+        this.jobName = jobName == null ? null : jobName.trim();
     }
 
     public String getJobHref() {
@@ -44,7 +51,7 @@ public class Job {
     }
 
     public void setJobHref(String jobHref) {
-        this.jobHref = jobHref;
+        this.jobHref = jobHref == null ? null : jobHref.trim();
     }
 
     public String getSalary() {
@@ -52,7 +59,7 @@ public class Job {
     }
 
     public void setSalary(String salary) {
-        this.salary = salary;
+        this.salary = salary == null ? null : salary.trim();
     }
 
     public String getCompanyName() {
@@ -60,7 +67,7 @@ public class Job {
     }
 
     public void setCompanyName(String companyName) {
-        this.companyName = companyName;
+        this.companyName = companyName == null ? null : companyName.trim();
     }
 
     public String getPubCity() {
@@ -68,7 +75,7 @@ public class Job {
     }
 
     public void setPubCity(String pubCity) {
-        this.pubCity = pubCity;
+        this.pubCity = pubCity == null ? null : pubCity.trim();
     }
 
     public String getDate() {
@@ -76,7 +83,7 @@ public class Job {
     }
 
     public void setDate(String date) {
-        this.date = date;
+        this.date = date == null ? null : date.trim();
     }
 
     public String getResouse() {
@@ -84,6 +91,6 @@ public class Job {
     }
 
     public void setResouse(String resouse) {
-        this.resouse = resouse;
+        this.resouse = resouse == null ? null : resouse.trim();
     }
 }

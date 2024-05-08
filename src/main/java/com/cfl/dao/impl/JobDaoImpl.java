@@ -1,11 +1,11 @@
 package com.cfl.dao.impl;
 
 import com.cfl.dao.JobDao;
+import com.cfl.mappers.JobMapper;
 import com.cfl.pojo.Company;
 import com.cfl.pojo.Job;
 import com.cfl.util.JobThread;
-import com.cfl.util.Resouce;
-import com.cfl.util.ResourceMapUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -13,10 +13,15 @@ import java.util.List;
 
 @Component
 public class JobDaoImpl implements JobDao {
+    @Autowired
+    private JobMapper jobMapper;
+
     @Override
     public List<Job> findFullTextByKey(String key) throws InterruptedException {
-
-
+//        List<Job> jobs = jobMapper.listAll();
+//        if(!jobs.isEmpty()) {
+//            return jobs;
+//        }
         System.out.println("jobdao");
 
         List<Job> list = new ArrayList<>();
